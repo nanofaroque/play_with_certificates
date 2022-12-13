@@ -99,3 +99,10 @@ coefficient:
 openssl rsa -in ofaroque_private.key -pubout -out ofaroque_public.key
 
 ```
+6. Now we have private key, public key, we need to sign and get the certificate signed by a CA authority.
+
+```
+openssl req -new -key ofaroque_private.key -out ofaroque.csr
+
+```
+Even though we are using private key here, openssl is extracting the public key from the private key.
