@@ -93,3 +93,9 @@ coefficient:
     ....
 
 ```
+5. Extracting public key from that private key
+
+```
+openssl rsa -in ofaroque_private.key -pubout -out ofaroque_public.key
+
+```
