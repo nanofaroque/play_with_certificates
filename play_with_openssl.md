@@ -99,7 +99,8 @@ coefficient:
 openssl rsa -in ofaroque_private.key -pubout -out ofaroque_public.key
 
 ```
-6. Now we have private key, public key, we need to sign and get the certificate signed by a CA authority.
+6. Now we have private key, public key, we need to make the CSR(Certificate signing request) file ready. We have to send this CSR file to a 
+certificate authority(CA) to sign it. 
 
 ```
 openssl req -new -key ofaroque_private.key -out ofaroque.csr
