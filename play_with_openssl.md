@@ -107,3 +107,20 @@ openssl req -new -key ofaroque_private.key -out ofaroque.csr
 
 ```
 Even though we are using private key here, openssl is extracting the public key from the private key.
+
+7. Look into the CSR file: 
+
+```
+cat ofaroque.csr
+```
+It will show something like: 
+
+```
+-----BEGIN CERTIFICATE REQUEST-----
+MIICqDCCAZACAQAwTjELMAkGA1UEBhMCVVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYD
+....
+....
+AFzU76m94vfVaJsA
+-----END CERTIFICATE REQUEST-----
+
+```
