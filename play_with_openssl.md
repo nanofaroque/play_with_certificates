@@ -72,24 +72,24 @@ It is not a valid key, please dont waste energy to mess with it.
 ```
 openssl rsa -text -in ofaroque_private.key -noout
 ```
-It will show something like: 
+It will show something like: (PKCS#1 format, please have a look at here:https://crypto.stackexchange.com/questions/79604/private-exponent-on-rsa-key )
 
 ```
 Private-Key: (2048 bit)
-modulus:
+modulus:                         #  -- n
     ....
-publicExponent: 65537 (0x10001)
-privateExponent:
+publicExponent: 65537 (0x10001)  #  -- e
+privateExponent:                 #  -- d
     ....
-prime1:
+prime1:                          #  -- p
     ....
-prime2:
+prime2:                          #  -- q
     ....
-exponent1:
+exponent1:                       # -- d mod (p-1)
     ....
-exponent2:
+exponent2:                       # -- d mod (q-1)
     ....
-coefficient:
+coefficient:                     # -- (inverse of q) mod p
     ....
 
 ```
@@ -98,6 +98,11 @@ coefficient:
 ```
 openssl rsa -in ofaroque_private.key -pubout -out ofaroque_public.key
 
+```
+
+You can decode the public key by running the command below: 
+```
+openssl rsa -pubin -in ofaroque_public.pem -text
 ```
 6. Now we have private key, public key, we need to make the CSR(Certificate signing request) file ready. We have to send this CSR file to a 
 certificate authority(CA) to sign it. 
