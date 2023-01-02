@@ -93,6 +93,12 @@ coefficient:                     # -- (inverse of q) mod p
     ....
 
 ```
+* Generating those paramerter above, please have a look: 
+https://www.onebigfluke.com/2013/11/public-key-crypto-math-explained.html
+
+* To understand multiplicative inverse: 
+https://www.youtube.com/watch?v=YwaQ4m1eHQo&ab_channel=NesoAcademy
+
 5. Extracting public key from that private key
 
 ```
