@@ -135,3 +135,57 @@ AFzU76m94vfVaJsA
 -----END CERTIFICATE REQUEST-----
 
 ```
+8. Lets look inside of the CSR file and what it contains
+
+```
+openssl req -in ofaroque.csr.csr -noout -text
+```
+It will show something like: 
+
+```
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=US, ST=Texas, L=Frisco, O=Omar, OU=Ops/emailAddress=faroque_eee@yahoo.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:bc:e0:f7:23:b5:9e:d6:52:e4:37:b2:b8:b8:97:
+                    4f:e5:66:f7:fb:fb:3f:71:f4:fe:79:91:96:60:84:
+                    43:a9:30:f2:b5:ab:86:3f:a4:a8:52:41:dd:39:ba:
+                    10:77:67:bb:38:3f:a3:e6:2c:10:7a:e3:50:f4:13:
+                    e3:4f:5d:6f:5b:16:68:4c:2d:15:f3:fa:59:d5:c9:
+                    fe:16:ae:f5:91:35:71:bc:17:46:53:92:0b:50:d8:
+                    8e:68:0b:12:68:7f:ec:05:01:bf:13:bd:1e:76:58:
+                    f0:e0:ee:76:b9:96:f5:e6:ff:a7:eb:b3:3c:fa:69:
+                    63:14:80:82:4d:81:12:56:f5:97:ac:99:20:51:72:
+                    32:94:9e:4b:8d:99:e9:e0:3a:df:8a:63:2a:04:78:
+                    f2:24:12:5e:b8:9b:e5:e2:39:70:af:82:c1:7a:83:
+                    78:2a:1e:e3:bf:cf:2c:b6:b3:a5:33:ae:0e:91:81:
+                    86:17:0a:37:ac:d7:5e:69:08:ef:76:6e:b4:38:d2:
+                    fc:ba:bf:28:81:43:81:4d:92:90:b6:c6:09:c2:10:
+                    ef:81:12:b1:75:e2:9f:06:1c:be:0f:99:76:17:8a:
+                    bd:7a:6f:8a:b2:f1:5e:db:b7:84:85:be:e3:54:94:
+                    32:7c:e6:ae:a6:ca:65:17:1b:0a:a9:ee:f1:19:79:
+                    2c:0f
+                Exponent: 65537 (0x10001)
+        Attributes:
+            challengePassword        :unable to print attribute
+    Signature Algorithm: sha256WithRSAEncryption
+         9a:71:79:5f:d7:10:39:ae:87:60:3f:1a:8f:70:52:4d:1b:11:
+         b4:da:25:47:33:80:11:16:d9:bd:55:06:b8:86:af:9a:5c:c9:
+         b8:f9:75:a2:ce:a7:ea:3d:7a:36:44:6b:a3:94:74:b3:2c:4e:
+         5c:9d:7a:6f:48:89:09:8b:f3:8f:a3:36:1e:58:f9:0b:a2:9c:
+         df:45:02:8f:86:21:8b:64:06:6c:62:37:c7:8f:3c:32:a0:45:
+         f4:3c:92:47:88:94:4c:70:01:2a:42:b3:f5:f9:88:3d:4f:3e:
+         c0:93:1d:8b:2c:9e:61:0d:09:6e:03:ba:37:36:ee:63:ef:db:
+         2f:7f:38:f6:15:8c:e2:3b:f1:75:88:63:65:62:c1:25:66:7d:
+         cd:c7:34:22:f8:a6:8f:30:41:89:2e:cb:ab:e9:d8:76:29:ed:
+         63:9b:9a:05:98:99:65:f9:dc:39:a0:35:f7:55:3e:1c:06:f3:
+         fc:b4:28:a3:b2:bd:e0:53:8f:71:6f:03:81:8f:74:21:13:5b:
+         17:5a:d1:d7:9f:f4:c3:ca:58:79:17:5c:da:40:a4:d4:18:fb:
+         a2:5c:6e:7d:0c:11:92:62:54:0d:1f:bb:13:6f:75:d6:ec:88:
+         6c:d2:70:1d:13:3f:eb:08:a8:61:b5:c1:b8:be:57:79:6e:e8:
+         c2:b2:fc:76
+```
